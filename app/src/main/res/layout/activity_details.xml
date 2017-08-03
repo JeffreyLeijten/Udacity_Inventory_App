@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/medium_margin"
+    tools:context="com.example.android.inventoryapp.DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/details_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_add_black_24dp" />
+
+    <TextView
+        android:id="@+id/name_details_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_margin"
+        tools:text="Product Name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quantity_details_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            tools:text="@string/quantity"/>
+
+        <Button
+            android:id="@+id/increase_button"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_alignParentRight="true"
+            android:text="+"/>
+
+        <Button
+            android:id="@+id/decrease_button"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_toLeftOf="@id/increase_button"
+            android:text="-"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/price_details_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_margin"
+        tools:text="Price"/>
+
+        <TextView
+            android:id="@+id/supplier_details_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_margin"
+            tools:text="Supplier"/>
+
+        <TextView
+            android:id="@+id/supplier_email_details_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_margin"
+            tools:text="Supplier email"/>
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_shipping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_local_shipping_black_24dp"
+        android:tint="#ffffff"/>
+
+</RelativeLayout>
